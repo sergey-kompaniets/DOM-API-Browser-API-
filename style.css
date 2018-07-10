@@ -1,0 +1,271 @@
+body {
+    
+    max-width: 56em;
+    margin: 0;
+    color: #444;
+    background: rgba(187, 187, 187, 0.08);
+    font: 300 18px/18px Roboto, sans-serif;
+    letter-spacing: 1.67px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 2vw auto 2vw;
+}
+
+header,
+footer {
+    grid-column: 1 / span 2;
+}
+
+#cards {
+    display: grid;
+    grid-gap: 2em;
+}
+
+.card {
+    margin-left: 140px;
+    position: relative;
+    height: auto;
+    width: 90%;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+img{
+    max-width: 12%;
+    border-radius: 50%;
+    margin: 10px 0 0 10px;
+
+    
+
+}
+
+.container {
+    width: 80%;
+}
+
+.container .desc {
+    color: rgba(12, 12, 12, 0.95);
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    height: 100px;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    width: 100%;
+    padding: 3px 2px;
+}
+
+
+
+.deleteButton{
+    position: absolute;
+    top:16px;
+    right: 1%;
+    border: 0;
+    font-size: 16px;
+    background: none;
+    cursor: pointer;
+    transition: 0.6s ease;
+    color: #CDD1D5;
+
+}
+/*.deleteButton:hover {
+    color: #FEA7A2;
+}*/
+.deleteButton:after {
+    content: '\f057';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 30px;
+    color: #4a4a4ad4;
+}
+
+.tags {
+    position: absolute;
+    bottom: 15px;
+    right: 3%;
+    font-size: 14px;
+   
+    text-align: end;
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    left: 18%;
+}
+
+.description {
+    max-width: 530px;
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    left: 18%;
+}
+
+.date {
+    font-size: 14px;
+    position: absolute;
+    bottom: 15px;
+    left: 18%;
+}
+
+aside{
+    background: #eaeaea;
+    position: fixed;
+    right: 0;
+    min-width: 25%;
+    height: 100vh;
+}
+
+.search{
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.search input[type=text] {
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid grey;
+    float: left;
+    width: 60%;
+    background: #f1f1f1;
+}
+
+div.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #8d8d8d;
+    color: white;
+    border: 1px solid grey;
+    border-left: none; 
+    cursor: pointer;
+}
+
+div.search button:hover {
+    background: #5c5c5c;
+}
+
+div.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btnSrc{
+    margin: 20px 22%;
+}
+
+.btnSrc .filterButton{
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+    height: 36px;
+    min-width: 88px;
+    padding: 6px 16px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border:0;
+    border-radius: 5px;
+    background: #4caf50;
+    color:#fff;
+    outline:0;
+}
+
+.btnSrc .filterButton:disabled {
+    background: #e5e5e5;
+}
+
+.btnSrc .filterButton:focus {
+    background: #3e9842;
+}
+
+.md-btn-ripple {
+  overflow: hidden;
+  position: relative;
+}
+
+.md-btn-ripple:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin-left: -60px;
+  margin-top: -60px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 100%;
+  transform: scale(0);
+}
+
+.md-btn-ripple:after {
+  visibility: hidden;
+}
+
+.md-btn-ripple:focus:after {
+  visibility: visible;
+}
+
+.md-btn-ripple:not(:active):after {
+  animation: md-btn-ripple .6s ease-out;
+}
+
+@keyframes md-btn-ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+
+
+#tags .filterButton{
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    color: #5c5c5c;
+    margun: 30px 0;
+    padding: 9px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#tags .filterButton:hover{
+    background-color: #5c5c5cd9;
+    color: #ffffff;
+}
+
+.active{
+    background-color: #515151;
+    color: white;
+}
+
+.getBackButton{
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    color: #5c5c5c;
+    padding: 9px 25px;
+    text-decoration: none;
+    width: 100%;
+    
+    
+}

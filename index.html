@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>List</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <header></header>
+    <div id="cards"></div>
+    <aside>
+    <button type="submit" class="getBackButton" id="getBackButton"><i class="fas fa-chevron-circle-up"></i></button>
+    <div class="search">
+        <input id="inputSearch" type="text" placeholder="Search.." name="search" onclick="search(value)">
+        <button ><i class="fa fa-search" ></i></button>
+    </div>
+    <div class="btnSrc">
+        <button id="asc" class="filterButton md-btn-ripple">Oldest</button>
+        <button id="desc" class="filterButton md-btn-ripple">Newest</button>
+    </div>
+    
+    <div id="tags"></div>
+
+    </aside>
+
+    <footer></footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
